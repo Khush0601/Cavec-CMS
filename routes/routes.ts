@@ -26,6 +26,10 @@ import achievementRoutes from "./crowdFunding/achievement.routes"
 import supportRoutes from "./crowdFunding/support.routes"
 import successStoryRoutes from "./successStories/successStories.routes"
 import leadershipRoutes from "./about/leadership.routes"
+import jobWorkFLowRoutes from "./job/jobWorkFlow.routes"
+import enrollmentRoutes from "./job/enrollment.routes"
+import recruitmentRoutes from "./job/recruitment.routes"
+import jobRoutes from "./job/job.routes"
 
 const AppRoutes=(app:Express)=>{
 app.use("/api/v1/home/hero-section", heroSectionRoutes);
@@ -55,7 +59,10 @@ app.use("/api/v1/crowdFunding/achievement",achievementRoutes)
 app.use("/api/v1/crowdFunding/support",supportRoutes)
 app.use("/api/v1/crowdFunding/successStory",successStoryRoutes)
 app.use("/api/v1/about/leadership",leadershipRoutes)
-
+app.use("/api/v1/job/jobWorkFlow",jobWorkFLowRoutes)
+app.use("/api/v1/job/enrollment",enrollmentRoutes)
+app.use("/api/v1/job/recritment",recruitmentRoutes)
+app.use("/api/v1/job/postingJob",jobRoutes)
 }
 
 export default AppRoutes
