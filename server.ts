@@ -21,6 +21,7 @@ AppRoutes(app)
 
 // db connected
 mongoose.connect(dbConfig.DB_URL);
+
 const db = mongoose.connection;
 db.on("error", () => {
   console.error("Error while connecting to the database");
@@ -28,6 +29,7 @@ db.on("error", () => {
 db.once("open", () => {
   console.log("Connected to MongoDB successfully");
 });
+console.log(dbConfig.DB_URL)
 
 //server connected
 app.listen(appConfig.PORT, () => {

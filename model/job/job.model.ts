@@ -11,7 +11,7 @@ export interface IJob extends Document {
   jobWorkflow: Types.ObjectId;
   recruitmentProcess: Types.ObjectId;
   enrollment: Types.ObjectId;
-  jobOpportunities: Types.ObjectId;
+ jobOpportunities: Types.ObjectId;
 
   createdAt?: Date;
   updatedAt?: Date;
@@ -59,6 +59,11 @@ const JobSchema = new Schema<IJob>(
       ref: "Enrollment",
       required: true,
     },
+   jobOpportunities: {
+  type: Schema.Types.ObjectId,
+  ref: "JobOpportunities",  
+},
+
    
   },
   { timestamps: true }

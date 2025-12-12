@@ -30,6 +30,8 @@ import jobWorkFLowRoutes from "./job/jobWorkFlow.routes"
 import enrollmentRoutes from "./job/enrollment.routes"
 import recruitmentRoutes from "./job/recruitment.routes"
 import jobRoutes from "./job/job.routes"
+import jobCategoryRoutes from "./job/jobCategory.routes"
+import jobOpportunitiesRoutes from "./job/jobOpportunities.routes"
 
 const AppRoutes=(app:Express)=>{
 app.use("/api/v1/home/hero-section", heroSectionRoutes);
@@ -63,6 +65,8 @@ app.use("/api/v1/job/jobWorkFlow",jobWorkFLowRoutes)
 app.use("/api/v1/job/enrollment",enrollmentRoutes)
 app.use("/api/v1/job/recritment",recruitmentRoutes)
 app.use("/api/v1/job/postingJob",jobRoutes)
+app.use("/api/v1/job/jobCategory",jobCategoryRoutes)
+app.use("/api/v1/job/jobOpportunities",jobOpportunitiesRoutes)
 }
 
 export default AppRoutes
